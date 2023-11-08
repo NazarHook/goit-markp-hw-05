@@ -90,12 +90,15 @@ line-height: 1.5;
 letter-spacing: 0.32px;
 color: var(--NAVY-BLUE, #2E2F42);
 padding: 24px 0;
-position: relative;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .nav-names:hover,
 .nav-names:focus{
     color: #404bbf;
+}
+.studio{
+    color: #404bbf;
+    position: relative;
 }
 .contacts-info{
     font-style: normal;
@@ -115,22 +118,14 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: #404bbf; 
 }
 .hero-section{
-    max-width: 1440px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-background: var(--NAVY-BLUE, #2E2F42);
-margin-top: 0;
-margin-bottom: 0;
+max-width: 1440px;
 padding-top: 188px;
 padding-bottom: 188px;
-background: linear-gradient(
-    var(--GREY, rgba(46, 47, 66, 0.70)),
-    var(--GREY, rgba(46, 47, 66, 0.70))
-),
-url(../images/bg/bgimg.jpg), lightgray 0px -167.766px / 100% 139.922% no-repeat;
-
-}
+background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg/bgimg.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}   
 .hero-section-title{
     text-align: center;
     font-family: Roboto;
@@ -272,11 +267,11 @@ padding-bottom: 32px 0;
     margin-top: 8px;
 }
 .team-card-icon{
-    fill: none;
-    stroke: #F4F4FD;
+   
+    fill: #F4F4FD;
 
 }
-.card-icons-decor .card-icons-decor-link {
+.card-icons-decor-link{
     width: 100%;
     height: 100%;
     background-color:  #4D5AE5;
@@ -286,9 +281,10 @@ padding-bottom: 32px 0;
 content: "";
 padding: 12px;
 border-radius: 50%;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.card-icons-decor-link:hover{
+.card-icons-decor-link:hover,
+.card-icons-decor-link:focus{
     background-color: #404bbf; 
 }
 .team-members-photo{ 
@@ -357,6 +353,7 @@ letter-spacing: 0.02em;
 width: 100%;
 height: 100%;
 padding: 40px 32px;
+background-color: #4d5ae5;
 transform: translateY(100%);
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -381,7 +378,7 @@ overflow: hidden;
 .project-card{
     background: var(--WHITE, #FFF);
     width: calc((100% - 48px) / 3);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .project-card-description{
     padding: 32px 16px ;
@@ -473,28 +470,37 @@ font-style: normal;
 font-weight: 500;
 line-height: 1.5;
 letter-spacing: 0.02em;
-color: var(--WHITE, #FFF);
+color: var(--WHITE, #FFFFFF);
 margin-bottom: 16px;
 }
 .footer-icons{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #4d5ae5;
-    border-radius: 50%;
     gap: 16px;
+    
+}
+.card-icons-decor{
+    width: 40px;
+    height: 40px;
+}
+.card-icons-decor-link-footer{
     width: 100%;
     height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-icons:hover,
-.footer-icons:focus{
+.card-icons-decor-link-footer:hover,
+.card-icons-decor-link-footer:focus{
     background-color:  #31d0aa;
 }
 .footer-card-icon{
     fill: #f4f4fd;
-   
 }
+
 .footer-input{
     width: 264px;
     height: 40px;
@@ -636,6 +642,7 @@ border-radius: 4px;
 background-color: transparent;
 border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
 padding-left: 38px;
+outline: transparent;
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-input-icon{
@@ -655,6 +662,7 @@ letter-spacing: 0.04em;
 color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
 background-color: transparent;
 outline: transparent;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .modal-form-area::placeholder{
 font-family: Roboto;
@@ -685,7 +693,8 @@ line-height: 1.5;
 letter-spacing: 0.04em;
 border: none;
 cursor: pointer;
-    padding: 16px 32px;
+padding: 0;
+
     width: 169px;
     height: 56px;
     border-radius: 4px;
